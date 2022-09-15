@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: student-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/school
+    username: postgres
+    password: admin
+  flyway:
+    schemas: public
+    user: postgres
+    password: admin
+    enabled: true
