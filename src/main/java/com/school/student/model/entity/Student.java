@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.lang.annotation.Target;
 import java.math.BigInteger;
 
 @Entity
@@ -13,9 +14,11 @@ import java.math.BigInteger;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(schema = "student", name = "student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private Integer id;
 
     @Column

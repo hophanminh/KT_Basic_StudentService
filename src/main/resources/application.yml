@@ -13,3 +13,6 @@ spring:
     user: postgres
     password: admin
     enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
