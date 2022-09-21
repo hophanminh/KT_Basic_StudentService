@@ -5,15 +5,16 @@ import com.school.student.model.dto.StudentDto;
 import com.school.student.model.entity.Student;
 import com.school.student.repository.StudentRepo;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.juli.logging.Log;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
 
     private StudentRepo studentRepo;
 
@@ -33,8 +34,19 @@ public class StudentServiceImpl implements StudentService{
         Student student = Student.builder()
                 .name(request.getName())
                 .build();
+        log.info("Create student in services: {}", request);
+        student = studentRepo.save(student);
 
-        log.info("{}", student);
+        return StudentDto.builder()
+                .name(student.getName())
+                .id(student.getId())
+                .build();
+    }
+
+    @Override
+    public StudentDto updateStudent(String idStudent, StudentRequest request) {
+        Student student = studentRepo.findById(Integer.valueOf(idStudent)).get();
+        student.setName(request.getName());
 
         student = studentRepo.save(student);
 

@@ -14,7 +14,7 @@ import java.math.BigInteger;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(schema = "student", name = "student")
+@Table(schema = "student",name = "student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
