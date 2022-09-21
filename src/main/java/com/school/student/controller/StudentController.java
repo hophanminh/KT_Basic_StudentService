@@ -1,8 +1,7 @@
 package com.school.student.controller;
 
-import com.school.student.model.StudentRequest;
+import com.school.student.model.request.StudentRequest;
 import com.school.student.model.dto.StudentDto;
-import com.school.student.model.entity.Student;
 import com.school.student.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

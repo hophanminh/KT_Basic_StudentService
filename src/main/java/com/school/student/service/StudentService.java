@@ -1,6 +1,6 @@
 package com.school.student.service;
 
-import com.school.student.model.StudentRequest;
+import com.school.student.model.request.StudentRequest;
 import com.school.student.model.dto.StudentDto;
 
 import java.util.List;

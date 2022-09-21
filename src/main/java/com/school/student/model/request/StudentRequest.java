@@ -1,4 +1,4 @@
-package com.school.student.model;
+package com.school.student.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

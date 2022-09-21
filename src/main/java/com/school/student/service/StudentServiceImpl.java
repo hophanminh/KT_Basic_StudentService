@@ -1,16 +1,14 @@
 package com.school.student.service;
 
-import com.school.student.model.StudentRequest;
+import com.school.student.model.request.StudentRequest;
 import com.school.student.model.dto.StudentDto;
 import com.school.student.model.entity.Student;
 import com.school.student.repository.StudentRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Slf4j
